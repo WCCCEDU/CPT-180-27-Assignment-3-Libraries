@@ -54,7 +54,7 @@ namespace config_reader {
         }
 
 
-        //infile.close();
+        infile.close();
         return 0;
     }
 
