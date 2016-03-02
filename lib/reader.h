@@ -5,5 +5,9 @@ namespace reader
 {
     std::string* read_config(std::string config_file_path);
     // Test to see if it works
-    int x();
+    int size_finder();
+using std::cout;
+using std::string;
+using std::getLine();
+using std::ifstream;
 }
