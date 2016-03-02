@@ -1,23 +1,10 @@
 #include <iostream>
-#include <fstream>
-#include "./libraries.h"
+#include "libraries.h"
 
+using namespace std;
 
-using  std::string;
+int main() {
 
-namespace config_reader {
-
-    string *read_config(string config_file_path) {
-
-
-        std::ifstream file(PATH);
-        file.open(PATH);
-
-        if (file.is_open()) {
-            string *config_Array[4];
-            for (int i = 0; i < 4; i++) {
-                file >> *config_Array[i];
-            }
-        }
-    }
+    config_reader::read_config("C:/Users/outla/Documents/WCCC/Semester 4/CPT-180/Assignment3/lib/app.cfg");
+    return 0;
 }
