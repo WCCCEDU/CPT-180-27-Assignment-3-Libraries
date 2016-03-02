@@ -40,7 +40,7 @@ namespace config_reader{
       config.close();
 
       // Create string pointer variable and assign address of array
-      string *lines = file_input;
+      string* lines = file_input;
       // test for pointer address of array
       cout << lines << endl;
       return lines;
