@@ -201,7 +201,44 @@ void ConfigGenerator(){
 }
 
 
+namespace ConfigReader{
+    string *ReadConfig(string config_file_path) {
+        string Location = "";
+        cout << "Enter file name, leave blank for default" << endl;
+        getline(cin, Location);
+        if (Location == "") {
+            Location = "Config.txt";
+        }
 
+        //retrieves data currently saved in file and prints for user
+        string Saved_Username = "";
+        string Saved_Email = "";
+        string Saved_Password = "";
+        string Saved_Timezone = "";
+        string line;
+
+        std::ifstream myfile(Location);
+        myfile.open(Location);
+        while (!myfile.eof()) {
+            for (int lineno = 0; getline(myfile, line) && lineno < 8; lineno++) {
+                if (lineno == 1) {
+                    Saved_Username = line;
+                }
+                if (lineno == 3) {
+                    Saved_Email = line;
+                }
+                if (lineno == 5) {
+                    Saved_Password = line;
+                }
+                if (lineno == 7) {
+                    Saved_Timezone = line;
+                }
+
+            }
+            string SavedData[4] = {Saved_Username, Saved_Email, Saved_Password, Saved_Timezone};
+        }
+    }
+}
 
 
 
