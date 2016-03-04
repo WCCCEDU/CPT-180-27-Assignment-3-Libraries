@@ -4,7 +4,7 @@
 #endif //CPT_180_27_ASSIGNMENT_3_LIBRARIES_CONFIG_H
 #include <iostream>
 #include <fstream>
-#include <./config.h>
+
 
 namespace config_reader{
 

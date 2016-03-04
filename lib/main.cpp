@@ -2,7 +2,7 @@
 #include <fstream>
 #include <./config.h>
 
-namespace config_reader{
+
 using std::string;
 using std::ifstream;
 int main() {
@@ -26,5 +26,4 @@ int main() {
     inputfile.close();
 
 return 0;
-}
 }
