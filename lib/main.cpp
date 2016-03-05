@@ -9,7 +9,7 @@ namespace config_reader {
     string *read_config(string config_file_path) {
 
         ifstream inputfile;
-        inputfile.open("./config.txt");
+        inputfile.open("/Users/jon/Desktop/C++repos/CPT-180-27-Config-Generator/config.txt");
 
         // Count Lines in file by reading file
         int number_of_lines = 0;
@@ -20,7 +20,7 @@ namespace config_reader {
         }
         inputfile.close();
 
-        inputfile.open("./config.txt");
+        inputfile.open("/Users/jon/Desktop/C++repos/CPT-180-27-Config-Generator/config.txt");
 
         string *config_input = new string[number_of_lines];
 
