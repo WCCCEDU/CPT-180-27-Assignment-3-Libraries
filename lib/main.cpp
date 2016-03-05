@@ -1,29 +1,39 @@
 #include <iostream>
 #include <fstream>
-#include <./config.h>
+#include "./config.h"
 
 
 using std::string;
 using std::ifstream;
-int main() {
-    string *read_config(string config_file_path);
+namespace config_reader {
+    string *read_config(string config_file_path) {
 
-    ifstream inputfile;
-    inputfile.open("config.txt");
+        ifstream inputfile;
+        inputfile.open("./config.txt");
 
-    string config_input[5];
+        // Count Lines in file by reading file
+        int number_of_lines = 0;
+        while (!inputfile.eof()) {
+            string thing;
+            getline(inputfile, thing);
+            number_of_lines++;
+        }
+        inputfile.close();
 
-    if (inputfile.is_open()) {
-        while (!inputfile.eof()){
+        inputfile.open("./config.txt");
+
+        string *config_input = new string[number_of_lines];
+
+        if (inputfile.is_open()) {
             int i = 0;
-            string config_line;
-            getline(inputfile, config_line);
-            config_input[i] = config_line;
-            i = i + 1;
-
+            while (!inputfile.eof()) {
+                string config_line;
+                getline(inputfile, config_line);
+                config_input[i] = config_line;
+                i++;
+            }
         }
-        }
-    inputfile.close();
-
-return 0;
+        inputfile.close();
+        return config_input;
+    }
 }
