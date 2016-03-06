@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+
+    //read the file into an array "userinfo"
+    std::ifstream file("config.txt");
+    if(file.is_open()) {
+
+        std::string userinfo[4];
+
+        for (int i = 0; i < 4; ++i) {
+            file >> userinfo[i];
+            //display stored values for proof of product(can be omitted later)
+            std::cout << userinfo[0] << std::endl;
+            std::cout << userinfo[1] << std::endl;
+            std::cout << userinfo[2] << std::endl;
+            std::cout << userinfo[3] << std::endl;
+        }
+    }
+        //let's one know if the config.txt file didn't load
+    else {
+        std::cout << "File didn't open :(" <<std::endl;
+    }
+    return 0;
+}
