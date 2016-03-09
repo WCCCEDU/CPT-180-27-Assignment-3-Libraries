@@ -1,0 +1,8 @@
+[NAME]
+Hank Williams
+[EMAIL]
+hankofwisdom@gmail.com
+[PASSWORD]
+snake_camel
+[TIMEZONE]
+-500
