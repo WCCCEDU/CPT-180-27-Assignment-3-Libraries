@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-    string* arr;
+    sting* arr;
 
     arr = config_reader::read_config("C:\\Users\\bonni\\Documents\\progwork\\CPT-180-27-Assignment-2-Config-Generator\\knownrecipients.txt");
 

@@ -30,3 +30,19 @@ string* config_reader::read_config(string config_file_path)
     return arr;
 
 }
+
+bool config_writer::write_config(string config_file_path, config write){
+    ofstream outFile;
+    outFile.open(config_file_path);
+    config write;
+    if (outFile.open()) {
+        outFile >> write.name;
+        outFile >> write.email;
+        outFile >> write.cypher;
+        outFile >> write.timezone_offset;
+        outFile >> write.file_path;
+    }
+
+    outFile.close();
+    return true;
+}
